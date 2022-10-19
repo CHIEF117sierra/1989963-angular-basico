@@ -1,0 +1,12 @@
+<h3>{{titulo}}</h3>
+
+<!-- Lista de ionic -->
+<ion-content class="ion-padding">
+<p>Lista de materias</p>
+
+<ion-list >  
+    <div *ngFor="let materia of materias">
+        <ion-item>{{materia.nombre}}</ion-item>
+    </div>
+</ion-list>
+</ion-content>

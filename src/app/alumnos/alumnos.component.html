@@ -1,0 +1,23 @@
+<h3>{{titulo}}</h3>
+
+<!-- Lista de ionic -->
+<ion-content class="ion-padding">
+  <p *ngIf="asistencia">Lista de Asistencia</p>
+  <p *ngIf="!asistencia">Lista de No Asistencia</p>
+
+  <div >
+  <ion-list >
+    <div *ngFor="let alumno of alumnos">
+      <ion-item *ngIf="alumno.presente"  >{{alumno.nombre}}</ion-item>
+    </div>
+  </ion-list>
+  </div>
+<!--lista de no asistencia-->
+  <p >Lista de No Asistencia</p>
+
+  <ion-list >   
+    <div *ngFor="let alumno of alumnos">
+      <ion-item *ngIf="!alumno.presente">{{alumno.nombre}}</ion-item>
+    </div>
+  </ion-list>
+</ion-content>
